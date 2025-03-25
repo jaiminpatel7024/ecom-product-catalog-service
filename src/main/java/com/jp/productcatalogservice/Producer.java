@@ -1,4 +1,4 @@
-package com.secor.subservice;
+package com.jp.productcatalogservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

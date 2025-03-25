@@ -1,4 +1,4 @@
-package com.secor.subservice;
+package com.jp.productcatalogservice;
 
 import lombok.Getter;
 import lombok.Setter;

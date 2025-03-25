@@ -1,4 +1,4 @@
-package com.secor.subservice;
+package com.jp.productcatalogservice;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

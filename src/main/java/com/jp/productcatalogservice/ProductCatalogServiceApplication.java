@@ -1,14 +1,14 @@
-package com.secor.subservice;
+package com.jp.productcatalogservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SubServiceApplication {
+public class ProductCatalogServiceApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(SubServiceApplication.class, args);
+        SpringApplication.run(ProductCatalogServiceApplication.class, args);
 
     }
 
