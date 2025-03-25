@@ -12,10 +12,11 @@ import java.util.Optional;
 @RequestMapping("api/v1")
 public class MainRestController {
 
-    private static final Logger log = LoggerFactory.getLogger(MainRestController.class);
 
     @Autowired
     ProductRepository productRepo;
+
+    private static final Logger log = LoggerFactory.getLogger(MainRestController.class);
 
     @GetMapping("/test")
     public ResponseEntity<?> testProductService() {
