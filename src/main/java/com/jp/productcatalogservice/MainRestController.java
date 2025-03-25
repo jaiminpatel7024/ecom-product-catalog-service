@@ -58,6 +58,7 @@ public class MainRestController {
     @PostMapping("/product/view/{productId}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long productId){
         log.info("Received request to delete product with product id : {} ",productId);
+        log.info("Testing extra");
         Optional<Product> productObj = productRepo.findById(productId);
         if(productObj.isPresent()){
             productRepo.deleteById(productId);
