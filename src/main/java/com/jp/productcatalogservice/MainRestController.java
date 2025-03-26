@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("/api/v1")
 public class MainRestController {
 
 
@@ -23,7 +23,7 @@ public class MainRestController {
         return ResponseEntity.ok("Product Service running fine");
     }
 
-    @PostMapping("/product/add")
+    @PostMapping("/products/add")
     public ResponseEntity<?> createPlan(@RequestBody Product product)
     {
         log.info("Received request to add product : {}", product);
@@ -31,7 +31,7 @@ public class MainRestController {
         return ResponseEntity.ok("New Product Added.");
     }
 
-    @GetMapping("/product/view/{productId}")
+    @GetMapping("/products/view/{productId}")
     public ResponseEntity<?> viewProduct(@PathVariable Long productId){
         log.info("Received request to view product with product id : {} ",productId);
         Optional<Product> productObj = productRepo.findById(productId);
@@ -42,7 +42,7 @@ public class MainRestController {
         }
     }
 
-    @PostMapping("/product/update")
+    @PostMapping("/products/update")
     public ResponseEntity<?> updateProductDetails(@RequestBody Product productParam){
         log.info("Received request to update product with data : {} ",productParam);
 
@@ -55,7 +55,7 @@ public class MainRestController {
         }
     }
 
-    @PostMapping("/product/view/{productId}")
+    @PostMapping("/products/delete/{productId}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long productId){
         log.info("Received request to delete product with product id : {} ",productId);
         log.info("Testing extra");
@@ -68,7 +68,7 @@ public class MainRestController {
         }
     }
 
-    @GetMapping("product/viewAll")
+    @GetMapping("products/viewAll")
     public ResponseEntity<?> viewAllProducts(){
         log.info("Received request to view all products");
         return ResponseEntity.ok(productRepo.findAll());
