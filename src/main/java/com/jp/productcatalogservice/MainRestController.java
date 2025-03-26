@@ -27,7 +27,7 @@ public class MainRestController {
     }
 
     @PostMapping("/products/add")
-    public ResponseEntity<?> createPlan(@RequestBody Product product,@RequestHeader("Authorization") String token)
+    public ResponseEntity<?> addProduct(@RequestBody Product product,@RequestHeader("Authorization") String token)
     {
         log.info("Received request to add product : {}", product);
 
